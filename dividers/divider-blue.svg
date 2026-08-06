@@ -1,0 +1,5 @@
+<svg viewBox="0 0 800 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="divider">
+  <line x1="0" y1="20" x2="368" y2="20" stroke="#2F5FFF" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
+  <line x1="432" y1="20" x2="800" y2="20" stroke="#2F5FFF" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
+  <path d="M400 8 L414 20 L400 32 L386 20 Z" fill="#2F5FFF"/>
+</svg>

@@ -1,0 +1,5 @@
+<svg viewBox="0 0 170 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GitHub">
+  <rect x="1" y="1" width="168" height="38" rx="19" fill="#FFFFFF" stroke="#2F5FFF" stroke-width="1.5"/>
+  <path d="M23 14l-6 6 6 6M33 14l6 6-6 6" stroke="#2F5FFF" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="48" y="25" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#0F1B33">GitHub</text>
+</svg>
