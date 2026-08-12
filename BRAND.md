@@ -72,9 +72,21 @@ Como o GitHub não carrega fontes externas (`@font-face`) dentro de SVGs isolado
 | Buttons | `linkedin.svg` | ✅ |
 | Buttons | `portfolio.svg` | ✅ |
 | Buttons | `email.svg` | ✅ |
-| Cards | project-card, feature-card, empty-card | 🚧 |
-| Timeline | `career.svg` | 🚧 |
-| Roadmap (componente visual) | `roadmap.svg` | 🚧 |
-| Stats | github-stats, activity | 🚧 |
+| Cards | `project-card.svg` | ✅ (template — editar texto por projeto) |
+| Cards | `feature-card.svg` | ✅ (template) |
+| Cards | `empty-card.svg` | ✅ |
+| Timeline | `career.svg` | ✅ (conector visual — datas/marcos ficam em texto/markdown ao lado) |
+| Roadmap (componente) | `roadmap.svg` | ✅ |
+| Stats | `github-stats.svg`, `activity.svg` | ✅ (moldura estática — ver nota abaixo) |
 
-Todos os headers, badges de tecnologia e botões estão prontos e seguem o mesmo padrão visual. Faltam apenas os componentes mais complexos — cards, timeline, roadmap (o gráfico visual, não o header) e stats — que entram na próxima sprint.
+Todos os componentes estão prontos e seguem o mesmo padrão visual.
+
+### Nota sobre `stats/`
+
+`github-stats.svg` e `activity.svg` são **molduras visuais**, não dados reais — os números aparecem como `···` de propósito. Estatísticas de GitHub (commits, streak, repositórios) mudam todo dia; um arquivo SVG estático ficaria desatualizado imediatamente e mostraria números errados para quem visitar o perfil.
+
+Para dados reais e sempre atualizados, a opção recomendada é usar um serviço dinâmico como o [github-readme-stats](https://github.com/anuraghazra/github-readme-stats), que gera a imagem via URL e busca os números em tempo real. É possível customizar as cores da query string para bater com esta paleta (`--ink`, `--brand`, `--accent`), mantendo a identidade visual.
+
+### Nota sobre `timeline/career.svg`
+
+O componente traz apenas a estrutura visual (linha + marcadores). As datas e marcos da carreira ficam escritos em markdown normal ao lado ou abaixo do SVG — mais fácil de editar do que texto dentro de um SVG, e evita erro de digitar uma data errada dentro do arquivo gráfico.

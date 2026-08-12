@@ -1,0 +1,8 @@
+<svg viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Feature card template">
+  <rect x="1" y="1" width="218" height="198" rx="14" fill="#F7F8FA" stroke="#E2E8F0" stroke-width="1.5"/>
+  <circle cx="110" cy="56" r="28" fill="#2F5FFF"/>
+  <path d="M97 56l9 9 17-19" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="110" y="112" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#0F1B33">Feature Title</text>
+  <text x="110" y="134" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#64748B">Short supporting description</text>
+  <text x="110" y="150" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#64748B">goes here, centered.</text>
+</svg>

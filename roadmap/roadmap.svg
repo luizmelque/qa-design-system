@@ -1,0 +1,42 @@
+<svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Learning roadmap">
+  <text x="0" y="23" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#0F1B33">Software Testing</text>
+  <rect x="190" y="10" width="360" height="12" rx="6" fill="#E2E8F0"/>
+  <rect x="190" y="10" width="306.0" height="12" rx="6" fill="#2F5FFF"/>
+  <text x="640" y="23" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#64748B">85%</text>
+  <text x="0" y="61" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#0F1B33">Test Analysis</text>
+  <rect x="190" y="48" width="360" height="12" rx="6" fill="#E2E8F0"/>
+  <rect x="190" y="48" width="288.0" height="12" rx="6" fill="#2F5FFF"/>
+  <text x="640" y="61" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#64748B">80%</text>
+  <text x="0" y="99" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#0F1B33">Requirement Analysis</text>
+  <rect x="190" y="86" width="360" height="12" rx="6" fill="#E2E8F0"/>
+  <rect x="190" y="86" width="270.0" height="12" rx="6" fill="#2F5FFF"/>
+  <text x="640" y="99" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#64748B">75%</text>
+  <text x="0" y="137" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#0F1B33">API Testing</text>
+  <rect x="190" y="124" width="360" height="12" rx="6" fill="#E2E8F0"/>
+  <rect x="190" y="124" width="252.0" height="12" rx="6" fill="#2F5FFF"/>
+  <text x="640" y="137" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#64748B">70%</text>
+  <text x="0" y="175" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#0F1B33">SQL</text>
+  <rect x="190" y="162" width="360" height="12" rx="6" fill="#E2E8F0"/>
+  <rect x="190" y="162" width="234.0" height="12" rx="6" fill="#2F5FFF"/>
+  <text x="640" y="175" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#64748B">65%</text>
+  <text x="0" y="213" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#0F1B33">Playwright</text>
+  <rect x="190" y="200" width="360" height="12" rx="6" fill="#E2E8F0"/>
+  <rect x="190" y="200" width="216.0" height="12" rx="6" fill="#2F5FFF"/>
+  <text x="640" y="213" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#64748B">60%</text>
+  <text x="0" y="251" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#0F1B33">Cypress</text>
+  <rect x="190" y="238" width="360" height="12" rx="6" fill="#E2E8F0"/>
+  <rect x="190" y="238" width="198.0" height="12" rx="6" fill="#2F5FFF"/>
+  <text x="640" y="251" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#64748B">55%</text>
+  <text x="0" y="289" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#0F1B33">CI/CD</text>
+  <rect x="190" y="276" width="360" height="12" rx="6" fill="#E2E8F0"/>
+  <rect x="190" y="276" width="108.0" height="12" rx="6" fill="#2F5FFF"/>
+  <text x="640" y="289" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#64748B">30%</text>
+  <text x="0" y="327" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#0F1B33">Performance Testing</text>
+  <rect x="190" y="314" width="360" height="12" rx="6" fill="#E2E8F0"/>
+  <rect x="190" y="314" width="72.0" height="12" rx="6" fill="#2F5FFF"/>
+  <text x="640" y="327" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#64748B">20%</text>
+  <text x="0" y="365" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#0F1B33">Accessibility Testing</text>
+  <rect x="190" y="352" width="360" height="12" rx="6" fill="#E2E8F0"/>
+  <rect x="190" y="352" width="54.0" height="12" rx="6" fill="#2F5FFF"/>
+  <text x="640" y="365" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#64748B">15%</text>
+</svg>

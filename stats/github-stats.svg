@@ -1,0 +1,14 @@
+<svg viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GitHub stats frame template">
+  <rect x="1" y="1" width="498" height="118" rx="14" fill="#0F1B33"/>
+  <text x="30" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#FFFFFF">···</text>
+  <text x="30" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#94A3B8">Commits</text>
+
+  <text x="200" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#FFFFFF">···</text>
+  <text x="200" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#94A3B8">Repositories</text>
+
+  <text x="370" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#00C2B8">···</text>
+  <text x="370" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#94A3B8">Day Streak</text>
+
+  <line x1="30" y1="86" x2="470" y2="86" stroke="#1E2C4A" stroke-width="1"/>
+  <text x="30" y="105" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#64748B">Template — connect to a live stats source to populate real numbers.</text>
+</svg>
