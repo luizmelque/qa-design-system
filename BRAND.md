@@ -82,7 +82,8 @@ Arquivo: [`brand-mark.svg`](./brand-mark.svg).
 | Dividers | `divider-blue-animated.svg` | transparente (linha) | ✅ brilho passando |
 | Headers | `about.svg`, `projects.svg`, `skills.svg`, `roadmap.svg`, `philosophy.svg`, `contact.svg` | próprio (ink) | — |
 | Headers | `typing-intro-en.svg`, `typing-intro-pt.svg` | transparente (texto azul) | ✅ efeito de digitação |
-| Badges | 10 arquivos (tecnologias) | próprio (ink) | — |
+| Badges (tecnologia) | playwright, cypress, sql, postman, javascript, typescript, docker, git, nodejs, jira, **selenium, python, php, postgresql, github, trello, vscode** | próprio (ink) — pill com ✓ teal | — |
+| Tags (categoria, sem ícone) | `tag-manual.svg`, `tag-exploratory.svg` / `tag-exploratorio.svg`, `tag-ux-analysis.svg` / `tag-analise-ux.svg`, `tag-checklist.svg`, `tag-test-matrix.svg` / `tag-matriz-testes.svg`, `tag-bug-report.svg`, `tag-api.svg` | próprio (ink-track, mais discreto) | — |
 | Buttons | `github.svg`, `linkedin.svg`, `portfolio.svg`, `email.svg` | próprio (branco) | — |
 | Cards | `project-card.svg`, `feature-card.svg` (templates) · `empty-card.svg` | próprio (paper) | — |
 | Roadmap | `roadmap.svg` | próprio (ink) | — |
@@ -90,6 +91,13 @@ Arquivo: [`brand-mark.svg`](./brand-mark.svg).
 | Timeline | `career.svg` | transparente (conector) | — |
 | Timeline | `career-animated.svg` | transparente (conector) | ✅ nó atual pulsando |
 | Stats | `github-stats.svg`, `activity.svg` (moldura, sem dados reais) | próprio (ink/paper) | — |
+
+### Badges vs. Tags — quando usar cada um
+
+- **Badge** (pill com ✓ teal): para tecnologias/ferramentas reais usadas (Playwright, Python, Docker...).
+- **Tag** (pill discreta, sem ícone, texto mais claro/muted): para categorias ou tipos de artefato dentro de uma tabela (Manual, Checklist, Bug Report...) — mesma forma de pill, visual mais neutro para não competir com os badges de tecnologia na mesma linha.
+
+**Nunca misture com badges do shields.io** (ou qualquer serviço externo com cantos retos) na mesma tabela/linha dos nossos badges — a inconsistência de forma (pill vs. retângulo) é o que causava o visual "feio" reportado. Sempre que precisar de uma tag/badge nova, gere no mesmo padrão pill deste repositório.
 
 ### Sobre `typing-intro-*.svg`
 
