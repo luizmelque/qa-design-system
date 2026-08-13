@@ -4,89 +4,97 @@ Guia de referência para manter consistência em todos os componentes SVG deste 
 
 ---
 
+## ⚠️ v2 — Correções de robustez (leia antes de subir)
+
+Esta versão corrige 3 problemas encontrados no README publicado:
+
+### 1. Tamanho quebrando em alguns contextos (ex: botões gigantes)
+
+**Causa:** nenhum SVG tinha os atributos `width`/`height` no elemento raiz — só `viewBox`. Sem tamanho intrínseco declarado, o navegador usa um padrão de **300×150px** quando o contexto não força um tamanho. Isso é o que deixou os botões (Email, LinkedIn, Portfolio) enormes.
+
+**Correção:** todo arquivo agora declara `width` e `height` explícitos, iguais ao `viewBox`. Isso garante que cada componente renderiza no tamanho certo **mesmo sem** nenhum `width` na tag `<img>` do README — funciona em qualquer contexto (README, link direto, app mobile, outro site).
+
+### 2. Texto invisível no tema escuro (headers e roadmap)
+
+**Causa:** os headers de seção e os rótulos do roadmap usavam texto escuro (`#0F1B33`) direto sobre fundo transparente. No tema claro do GitHub isso é legível; no tema escuro, o texto se mistura com o fundo quase preto da página e desaparece.
+
+**Correção:** headers e roadmap agora são **cards autocontidos** — fundo escuro fixo (`#0F1B33`) sempre presente, com texto branco por cima. Não dependem mais da cor de fundo da página, então funcionam de forma idêntica em tema claro, escuro, ou qualquer outro contexto. Esse é o mesmo princípio que já protegia os badges e botões (que sempre tiveram fundo próprio).
+
+### 3. Live GitHub Stats não carregando
+
+**Causa:** a instância pública do `github-readme-stats.vercel.app` é um serviço gratuito compartilhado por milhares de perfis — sofre rate-limiting e quedas com frequência (isso é documentado como problema conhecido pelos próprios mantenedores do projeto). Não é um bug do seu README; é uma limitação de infraestrutura de terceiros.
+
+**Opções para resolver de vez** (ver conversa para detalhes):
+- Fazer deploy da sua própria instância no Vercel (gratuito, ~2 minutos, remove o limite compartilhado)
+- Usar GitHub Actions para gerar um SVG estático no seu próprio repositório em um horário fixo (não depende de terceiros online)
+- Manter como está e aceitar que pode falhar ocasionalmente
+
+---
+
 ## Cores
 
 | Nome | Token | Hex | Uso |
 |---|---|---|---|
-| Ink | `--ink` | `#0F1B33` | Texto principal, ícones sobre fundo claro |
-| Brand | `--brand` | `#2F5FFF` | Cor primária — chips, bordas, ícones de destaque |
-| Accent | `--accent` | `#00C2B8` | Acento secundário — checkmarks, indicadores de "verificado" |
-| Muted | `--muted` | `#64748B` | Texto e traços secundários |
-| Paper | `--paper` | `#F7F8FA` | Fundo claro (cards, headers) |
+| Ink | `--ink` | `#0F1B33` | Fundo dos cards autocontidos (headers, roadmap, badges) |
+| Ink Track | `--ink-track` | `#1E2C4A` | Trilho de barras de progresso sobre fundo ink |
+| Brand | `--brand` | `#2F5FFF` | Cor primária — chips, bordas, ícones, barras de progresso |
+| Accent | `--accent` | `#00C2B8` | Acento secundário — checkmarks, indicadores "verificado"/"atual" |
+| Muted | `--muted` | `#64748B` | Texto secundário sobre fundo claro |
+| Muted Light | `--muted-light` | `#94A3B8` | Texto secundário sobre fundo ink (escuro) |
+| Paper | `--paper` | `#F7F8FA` | Fundo claro (cards de projeto, botões) |
 | White | `--white` | `#FFFFFF` | Texto sobre fundo escuro/brand |
 
-## Monograma
+## Regra de contraste (nova, obrigatória)
 
-Em vez de um "LM" literal, o símbolo da marca combina um colchete de código com um checkmark — remete a "código verificado", o núcleo do trabalho de QA:
+**Todo componente que contém texto deve ter seu próprio fundo opaco** — nunca texto direto sobre fundo transparente. Isso garante que o componente renderiza corretamente em qualquer contexto (tema claro, escuro, terceiros incorporando o SVG, impressão) sem depender da página em que está embutido.
+
+## Regra de tamanho (nova, obrigatória)
+
+**Todo componente deve declarar `width` e `height` no elemento `<svg>` raiz**, além do `viewBox`, com valores iguais às dimensões do `viewBox`. Isso garante tamanho correto por padrão, mesmo sem nenhum `width` na tag `<img>` que o referencia.
+
+## Monograma
 
 ```
 <✓>
 ```
-
-Use esse símbolo como assinatura visual em banners, favicon e materiais de marca. Arquivo pronto: [`brand-mark.svg`](./brand-mark.svg) (raiz do repositório).
+Arquivo: [`brand-mark.svg`](./brand-mark.svg).
 
 ## Tipografia
-
-Como o GitHub não carrega fontes externas (`@font-face`) dentro de SVGs isolados, todos os componentes usam a stack de sistema, que renderiza de forma consistente em qualquer navegador:
 
 ```
 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif
 ```
 
-- **Headers de seção:** peso 700 (bold), 22–24px
-- **Badges:** peso 600 (semibold), 13–14px
-- **Botões:** peso 600 (semibold), 14px
-
 ## Traço e forma
 
-- **Espessura de linha:** sempre `2px` (ícones grandes) ou `1.6–2.2px` (ícones pequenos dentro de badges)
+- **Espessura de linha:** `2px` (ícones grandes) ou `1.6–2.2px` (ícones pequenos)
 - **Cap/join:** sempre `round`
-- **Raio de borda:**
-  - `999px` (pill) → badges, botões
-  - `12px` → cards, chips de ícone em headers
-- **Ícones:** desenhados como line-art simples e minimalista — nunca logos oficiais de marcas de terceiros (GitHub, LinkedIn, etc.), para evitar uso indevido de marca registrada. Usamos formas genéricas que remetem ao conceito (rede, código, pasta) mantendo o mesmo traço em todo o sistema.
+- **Raio de borda:** `999px` (pill) para badges/botões · `12–16px` para cards/headers/chips
 
-## Componentes já criados
+---
 
-| Categoria | Arquivo | Status |
-|---|---|---|
-| Brand | `brand-mark.svg` | ✅ |
-| Dividers | `divider-blue.svg` | ✅ |
-| Headers | `about.svg` | ✅ |
-| Headers | `projects.svg` | ✅ |
-| Headers | `skills.svg` | ✅ |
-| Headers | `roadmap.svg` | ✅ |
-| Headers | `philosophy.svg` | ✅ |
-| Headers | `contact.svg` | ✅ |
-| Badges | `playwright.svg` | ✅ |
-| Badges | `cypress.svg` | ✅ |
-| Badges | `sql.svg` | ✅ |
-| Badges | `postman.svg` | ✅ |
-| Badges | `javascript.svg` | ✅ |
-| Badges | `typescript.svg` | ✅ |
-| Badges | `docker.svg` | ✅ |
-| Badges | `git.svg` | ✅ |
-| Badges | `nodejs.svg` | ✅ |
-| Badges | `jira.svg` | ✅ |
-| Buttons | `github.svg` | ✅ |
-| Buttons | `linkedin.svg` | ✅ |
-| Buttons | `portfolio.svg` | ✅ |
-| Buttons | `email.svg` | ✅ |
-| Cards | `project-card.svg` | ✅ (template — editar texto por projeto) |
-| Cards | `feature-card.svg` | ✅ (template) |
-| Cards | `empty-card.svg` | ✅ |
-| Timeline | `career.svg` | ✅ (conector visual — datas/marcos ficam em texto/markdown ao lado) |
-| Roadmap (componente) | `roadmap.svg` | ✅ |
-| Stats | `github-stats.svg`, `activity.svg` | ✅ (moldura estática — ver nota abaixo) |
+## Componentes
 
-Todos os componentes estão prontos e seguem o mesmo padrão visual.
+| Categoria | Arquivo | Fundo | Animado? |
+|---|---|---|---|
+| Brand | `brand-mark.svg` | próprio (blue) | — |
+| Dividers | `divider-blue.svg` | transparente (linha) | — |
+| Dividers | `divider-blue-animated.svg` | transparente (linha) | ✅ brilho passando |
+| Headers | `about.svg`, `projects.svg`, `skills.svg`, `roadmap.svg`, `philosophy.svg`, `contact.svg` | próprio (ink) | — |
+| Headers | `typing-intro-en.svg`, `typing-intro-pt.svg` | transparente (texto azul) | ✅ efeito de digitação |
+| Badges | 10 arquivos (tecnologias) | próprio (ink) | — |
+| Buttons | `github.svg`, `linkedin.svg`, `portfolio.svg`, `email.svg` | próprio (branco) | — |
+| Cards | `project-card.svg`, `feature-card.svg` (templates) · `empty-card.svg` | próprio (paper) | — |
+| Roadmap | `roadmap.svg` | próprio (ink) | — |
+| Roadmap | `roadmap-animated.svg` | próprio (ink) | ✅ barras preenchendo |
+| Timeline | `career.svg` | transparente (conector) | — |
+| Timeline | `career-animated.svg` | transparente (conector) | ✅ nó atual pulsando |
+| Stats | `github-stats.svg`, `activity.svg` (moldura, sem dados reais) | próprio (ink/paper) | — |
 
-### Nota sobre `stats/`
+### Sobre `typing-intro-*.svg`
 
-`github-stats.svg` e `activity.svg` são **molduras visuais**, não dados reais — os números aparecem como `···` de propósito. Estatísticas de GitHub (commits, streak, repositórios) mudam todo dia; um arquivo SVG estático ficaria desatualizado imediatamente e mostraria números errados para quem visitar o perfil.
+Efeito de digitação com uma frase fixa, 100% autocontido (sem depender de serviço externo). É uma alternativa mais simples ao `readme-typing-svg.demolab.com` que você já está usando (que faz rotação entre várias frases) — use o que preferir. A vantagem deste é zero dependência externa: nunca vai cair ou dar timeout.
 
-Para dados reais e sempre atualizados, a opção recomendada é usar um serviço dinâmico como o [github-readme-stats](https://github.com/anuraghazra/github-readme-stats), que gera a imagem via URL e busca os números em tempo real. É possível customizar as cores da query string para bater com esta paleta (`--ink`, `--brand`, `--accent`), mantendo a identidade visual.
+### Sobre `career.svg` / `career-animated.svg`
 
-### Nota sobre `timeline/career.svg`
-
-O componente traz apenas a estrutura visual (linha + marcadores). As datas e marcos da carreira ficam escritos em markdown normal ao lado ou abaixo do SVG — mais fácil de editar do que texto dentro de um SVG, e evita erro de digitar uma data errada dentro do arquivo gráfico.
+Só a estrutura visual (linha + marcadores) — as datas e marcos ficam em markdown normal ao lado, não dentro do SVG.

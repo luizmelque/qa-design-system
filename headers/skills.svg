@@ -1,7 +1,8 @@
-<svg viewBox="0 0 700 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Skills section header">
+<svg viewBox="0 0 172 64" width="172" height="64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Skills section header">
+  <rect x="0" y="0" width="172" height="64" rx="16" fill="#0F1B33"/>
   <rect x="8" y="8" width="48" height="48" rx="12" fill="#2F5FFF"/>
   <rect x="18" y="32" width="6" height="12" rx="2" fill="#FFFFFF"/>
   <rect x="29" y="24" width="6" height="20" rx="2" fill="#FFFFFF"/>
   <rect x="40" y="16" width="6" height="28" rx="2" fill="#FFFFFF"/>
-  <text x="72" y="40" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#0F1B33">Skills</text>
+  <text x="72" y="40" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">Skills</text>
 </svg>

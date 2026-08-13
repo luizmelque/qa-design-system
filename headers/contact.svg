@@ -1,6 +1,7 @@
-<svg viewBox="0 0 700 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Contact section header">
+<svg viewBox="0 0 205 64" width="205" height="64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Contact section header">
+  <rect x="0" y="0" width="205" height="64" rx="16" fill="#0F1B33"/>
   <rect x="8" y="8" width="48" height="48" rx="12" fill="#2F5FFF"/>
   <rect x="16" y="21" width="32" height="22" rx="3" fill="none" stroke="#FFFFFF" stroke-width="2.3"/>
   <path d="M16 23l16 12 16-12" stroke="#FFFFFF" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="72" y="40" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#0F1B33">Contact</text>
+  <text x="72" y="40" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">Contact</text>
 </svg>
